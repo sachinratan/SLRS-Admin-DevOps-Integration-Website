@@ -1,0 +1,14 @@
+{{ define "content" }}
+<h2>Welcome</h2>
+<form action="/submit" method="post">
+  <input type="text" name="author" placeholder="Your name">
+  <textarea name="content" placeholder="Message" required></textarea>
+  <button type="submit">Post</button>
+</form>
+<ul>
+  {{ range .Messages }}
+  <li><strong>{{ if .Author }}{{ .Author }}{{ else }}Anonymous{{ end }}</strong>: {{ .Content }}</li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ template "layout.html" . }}

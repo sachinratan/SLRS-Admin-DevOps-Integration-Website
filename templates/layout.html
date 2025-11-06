@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ .Title }} - SLRS-Admin Devops Site</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1><a href="/">SLRS-Admin Devops Site</a></h1>
+    <nav><a href="/">Home</a> · <a href="/about">About</a></nav>
+  </header>
+  <main class="container">{{ template "content" . }}</main>
+  <footer class="site-footer"><small>© SLRS-Admin Devops Site — {{ .Now.Format "2006-01-02" }}</small></footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
